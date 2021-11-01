@@ -65,6 +65,13 @@ clone代码，然后执行`docker-build.sh`脚本
 
 - 自动构建[推荐]：
 
+在构建时我遇见总是报错，后来查资料需要安装ojdbc8.jar,官方程序中没有ojdbc8.jar这个文件，是我加进来的
+
+```
+//项目更目录先运行它
+mvn install:install-file -Dfile=ojdbc8.jar -DgroupId=com.oracle -DartifactId=ojdbc8 -Dversion=12.1.0.1 -Dpackaging=jar
+```
+
 Mac/Linux系统可直接执行`build.sh`进行构建，构建结果在`dist/gen`文件夹下。
 
 - 手动构建：
